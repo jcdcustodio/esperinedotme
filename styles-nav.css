@@ -1,0 +1,141 @@
+#nav-shell {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    position: fixed;
+    z-index: 2;
+
+    background-color: var(--primary-main);
+    /* transition: background-color 0.2s ease-in-out; */
+}
+
+#nav-shell.scroll-active {
+    background-color: var(--primary-main);
+}
+
+/* Logo properties */
+
+#nav-logo {
+    color: var(--secondary-main);
+    margin: 0;
+}
+
+#nav-logo:hover {
+    color: var(--secondary-main);
+    transition: 0.1s;
+}
+
+/* Navbar properties */
+
+.btn-style {
+    color: var(--secondary-main);
+    display: none;
+}
+
+#nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+#nav-menu li {
+    display: block;
+    padding-left: 2.5rem;
+}
+
+#nav-menu li a {
+    display: block;
+    box-sizing: border-box;
+
+    color: var(--secondary-main);
+    font-size: 1.25rem;
+}
+
+#nav-menu li::after {
+    content: '';
+    width: 0;
+    height: 1.5px;
+    display: flex;
+
+    background-color: var(--secondary-main);
+    transition: 0.2s;
+}
+
+#nav-menu li:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    #menu-open {
+        display: block;
+        cursor: pointer;
+    }
+
+    #menu-close {
+        display: none;
+        cursor: pointer;
+    }
+
+    #nav-menu {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        height: 0;
+
+        background-color: var(--primary-main);
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+    }
+
+    #nav-menu li {
+        display: block;
+        position: relative;
+        top: -5rem;
+        margin: 1.25rem 0;
+        padding: 0;
+
+        transition: 0.15s;
+        opacity: 0;
+    }
+
+    #nav-menu li a {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    #nav-menu li::after {
+        display: block;
+        position: absolute;
+    }
+
+    /* Toggle menu */
+
+    #nav-menu.view-menu {
+        height: 100%;
+        transition: 0.3s ease-in-out;
+        opacity: 1;
+    }
+
+    #nav-menu.view-menu li {
+        opacity: 1;
+    }
+
+    .view-menu ~ #menu-open {
+        display: none;
+    }
+
+    .view-menu ~ #menu-close {
+        display: block;
+    }
+}

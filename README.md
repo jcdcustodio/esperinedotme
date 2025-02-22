@@ -1,2 +1,3 @@
-# esperinedotme
-Prototype of personal website/portfolio
+# esperine.me
+
+A prototype of personal website/portfolio.

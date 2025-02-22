@@ -1,0 +1,307 @@
+/* Matches the root element of a tree representing the document - <html> */
+/* Declare variables here */
+
+:root {
+    --default-font: "Inter", sans-serif, system-ui;
+    --primary-main: #11182C;
+    --secondary-main: #99CCFF;
+    --accent-main: #44FFD2;
+    --secondary-alt: #5CADFF;
+    --accent-alt: #00E0AC;
+
+    --def-body: clamp(1rem, calc(1.25vw + 1rem), 2.5rem);
+    --def-h1: clamp(2rem, calc(2.5vw + 1rem), 4rem);
+}
+
+/* Global settings */
+
+* {
+    font-family: var(--default-font) !important;
+    scroll-behavior: smooth;
+
+    box-sizing: border-box;
+}
+
+* a {
+    text-decoration: none !important;
+}
+
+/* Home - Header */
+
+.hero-container {
+    width: 100%;
+    min-height: 50vh;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    background-image: linear-gradient(to bottom, rgba(4,9,30,0.9), rgba(4,9,30,0.45)), url(./assets/darktunnel.png);
+    background-position: center bottom;
+}
+
+.hero-text {
+    margin: 0 5rem;
+    padding-top: 5rem;
+    color: white;
+    word-wrap: break-word;
+}
+
+.hero-text h1 {
+    font-weight: 700;
+    color: var(--accent-main);
+}
+
+.hero-text h5 {
+    font-weight: 300;
+    font-size: calc(1.25rem + 0.5vw);
+}
+
+/* Home - Featured Work */
+
+.container-fluid.featured-work {
+    background-color: #FFFFFF;
+}
+
+.row > * {
+    padding: 0;
+    margin: 0;
+}
+
+.featured-img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.featured-detail {
+    padding: min(0.625rem, 10%);
+    text-align: center;
+    text-wrap: balance;
+}
+
+.featured-detail h6 {
+    padding: 0;
+    margin: 0;
+    color: var(--primary-main);
+    margin: 0.25rem;
+}
+
+.featured-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.featured-category {
+    font-weight: 500;
+}
+
+/* Home - CTA section */
+
+#home-cta {
+    width: 100%;
+    height: 25vh;
+    background-color: var(--primary-main);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-cta h3 {
+    color: #FFFFFF;
+    padding-bottom: 0.5rem;
+}
+
+#home-cta .btn {
+    padding: 1.5rem 2.5rem;
+    border-radius: 0;
+    border: 0;
+
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--primary-main);
+
+    background-color: var(--accent-main);
+    transition: 0.2s;
+}
+
+#home-cta .btn:hover {
+    background-color: var(--accent-alt);
+}
+
+/* Footer */
+
+#footer-shell {
+    max-height: 25vh;
+    background-color: var(--secondary-main);
+    padding: 2rem 5rem 3rem 5rem;
+}
+
+#footer-shell h5 {
+    font-size: calc(1.25rem + 0.5vw);
+    font-weight: 700;
+    margin: 0.25rem 0;
+}
+
+#footer-shell #footer-links-header {
+    margin: 4px 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+#footer-shell #footer-links-icons a {
+    color: var(--primary-main);
+    padding-right: 0.5rem;
+}
+
+/* General title container */
+
+.title-container {
+    width: 100%;
+    min-height: 25vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--accent-main);
+    background-position: center bottom;
+}
+
+.title-text {
+    margin: 0 5rem;
+    padding-top: 5rem;
+    color: white;
+    word-wrap: break-word;
+}
+
+.title-text h1 {
+    font-weight: 700;
+    color: var(--primary-main);
+}
+
+/* General section */
+
+.single-page-container {
+    width: 100%;
+    min-height: 75vh;
+
+    background-color: #FFFFFF;
+}
+
+/* Work section */
+
+.works-img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.works-collection p {
+    margin: 0;
+    padding: 1rem;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-main);
+}
+
+/* Blog section */
+
+.blog-entry-card {
+    border: 0;
+    background-color: rgb(250, 250, 250);
+
+    color: var(--primary-main);
+}
+
+.blog-entry-card-title {
+    font-weight: 700;
+}
+
+.blog-entry-card-rm {
+    font-weight: 900;
+    color: var(--secondary-alt);
+
+    transition: 0.2s;
+}
+
+.blog-entry-card-rm:hover {
+    color: var(--primary-main);
+}
+
+/* About section */
+
+.display-photo {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.about-container {
+    color: var(--primary-main);
+}
+
+.about-header {
+    font-weight: 500;
+}
+
+.about-text {
+    font-weight: 300;
+}
+
+/* Contact section */
+
+#contact-page-container {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #FFFFFF;
+}
+
+#contact-main-container {
+    text-align: left;
+}
+
+#contact-header {
+    font-weight: 500;
+}
+
+#contact-text {
+    font-weight: 300;
+}
+
+#contact-text a {
+    color: var(--secondary-alt);
+    font-weight: 500;
+}
+
+#contact-main-container .btn {
+    padding: 1.5rem 2.5rem;
+    border-radius: 0;
+    border: 0;
+
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--primary-main);
+
+    background-color: var(--accent-main);
+    transition: 0.2s;
+}
+
+#contact-main-container .btn:hover {
+    background-color: var(--accent-alt);
+}
+
+#contact-links {
+    padding: 0.75rem;
+}
+
+#contact-links a {
+    color: var(--primary-main);
+    padding-right: 1rem;
+}
